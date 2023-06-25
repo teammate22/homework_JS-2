@@ -15,7 +15,7 @@ const auto = {
   },
 }
 
-//* вывод в консоль
+// вывод в консоль
 auto.logInfo()
 auto.timeCount(1000)
 
@@ -71,7 +71,7 @@ function Cut(fraction: object){
   return fractionCut
 }
 
-//* вывод в консоль
+// вывод в консоль
 console.log(Sum(new Fraction(2, 5), new Fraction(7, 5)))
 console.log(Subst(new Fraction(5, 2), new Fraction(3, 2)))
 console.log(Mult(new Fraction(7, 3), new Fraction(2, 4)))
@@ -100,7 +100,7 @@ const time = {
   },
 }
 
-//* вывод в консоль
+// вывод в консоль
 time.Show()
 time.addHour(2)
 time.addMin(25)
