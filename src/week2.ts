@@ -1,5 +1,7 @@
 import './style.css'
 //! задание 1
+console.log('Task 1')
+
 let shoppingList = [
   {name: 'apple', quantity: 12, isBought: true},
   {name: 'egg', quantity: 10, isBought: false},
@@ -44,15 +46,17 @@ function Purchase(){
 }
 
 // вывод в консоль
-//* Show()
-//* Add()
-//* console.log('Был добавлен товар')
-//* Show()
-//* Purchase()
-//* console.log('Товар был куплен')
-//* Show()
+Show()
+Add()
+console.log('Был добавлен товар')
+Show()
+Purchase()
+console.log('Товар был куплен')
+Show()
 
 //! задание 2
+console.log('Task 2')
+
 let check = [
   {name: 'avocado', quantity: 2, price: 200},
   {name: 'milk', quantity: 3, price: 80},
@@ -101,6 +105,8 @@ maxPrice()
 averageCost()
 
 //! задание 3
+console.log('Task 3')
+
 let css = [
   {name: 'font-size', value: '20px'},
   {name: 'color', value: 'blue'},
@@ -110,6 +116,8 @@ let css = [
   {name: 'border-radius', value: '10px'},
   {name: 'padding', value: '10px'},
   {name: 'font-family', value: 'sans-serif'},
+  {name: 'cursor', value: 'pointer'},
+  {name: 'border', value: '2px solid violet'},
 ]
 let p = document.getElementById('mainP')
 let style = document.getElementById('style')
@@ -129,6 +137,8 @@ function useStyle(text: string){
 useStyle('I wrote styles for this element using type script')
 
 //! задание 4
+console.log('Task 4')
+
 let classrooms = [
   {name: 'yandex', seats: 15, faculty: 'web design'},
   {name: 'apple', seats: 17, faculty: 'web development'},

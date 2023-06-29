@@ -1,5 +1,7 @@
 import './style.css'
 //! задание 1
+console.log('Task 1')
+
 const auto = {
   manufacturer: "Tesla",
   model: "model x",
@@ -20,6 +22,8 @@ auto.logInfo()
 auto.timeCount(1000)
 
 //! задание 2
+console.log('Task 2')
+
 function Fraction(numerator: number, denominator: number) {
   this.numerator = numerator;
   this.denominator = denominator;
@@ -79,6 +83,8 @@ console.log(Div(new Fraction(9, 7), new Fraction(8, 4)))
 console.log(Cut(new Fraction(18, 6)))
 
 //! задание 3
+console.log('Task 3')
+
 const time = {
   second: 15,
   minute: 10,
