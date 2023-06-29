@@ -44,13 +44,13 @@ function Purchase(){
 }
 
 // вывод в консоль
-// Show()
-// Add()
-// console.log('Был добавлен товар')
-// Show()
-// Purchase()
-// console.log('Товар был куплен')
-// Show()
+//* Show()
+//* Add()
+//* console.log('Был добавлен товар')
+//* Show()
+//* Purchase()
+//* console.log('Товар был куплен')
+//* Show()
 
 //! задание 2
 let check = [
