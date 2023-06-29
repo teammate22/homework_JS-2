@@ -173,8 +173,15 @@ function FilterByGroup(groupName: string){
 }
 
 function SortBySeats(){
-  let a = classrooms.sort((a, b) => a.seats > b.seats ? 1 : -1)
-  console.log(a)
+  let arr = [...classrooms]
+  let sort = arr.sort((a, b) => a.seats > b.seats ? 1 : -1)
+  console.log(sort)
+}
+
+function SortByName(){
+  let arr = [...classrooms]
+  let sort = arr.sort((a, b) => a.name > b.name ? 1 : -1)
+  console.log(sort)
 }
 
 // вывод в консоль
@@ -187,3 +194,5 @@ console.log('Какие аудитории подходят для группы 
 FilterByGroup('design22')
 console.log('Сортировка аудиторий по количеству мест')
 SortBySeats()
+console.log('Сортировка аудиторий по алфавиту')
+SortByName()
