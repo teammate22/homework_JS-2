@@ -21,9 +21,7 @@ function Show(){
   }
 }
 
-function Add(){
-  let productName = prompt('Какой товар вы хотели бы купить?')
-  let quantity = Number(prompt('Сколько штук вам нужно?'))
+function Add(productName: string, quantity: number){
   let inList = false
   for(let i of shoppingList){
     if(i.name == productName){
@@ -36,8 +34,7 @@ function Add(){
   }
 }
 
-function Purchase(){
-  let productName = prompt('Какой продукт вы купили?')
+function Purchase(productName: string){
   for(let i of shoppingList){
     if(i.name == productName){
       i.isBought = true
@@ -47,10 +44,10 @@ function Purchase(){
 
 // вывод в консоль
 Show()
-Add()
+Add('mango', 4)
 console.log('Был добавлен товар')
 Show()
-Purchase()
+Purchase('egg')
 console.log('Товар был куплен')
 Show()
 
@@ -105,7 +102,7 @@ maxPrice()
 averageCost()
 
 //! задание 3
-console.log('Task 3')
+console.log('Task 3 (css)')
 
 let css = [
   {name: 'font-size', value: '20px'},
