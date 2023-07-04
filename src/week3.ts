@@ -87,32 +87,96 @@ NumToStr(67)
 //! задание 3
 console.log('Task 3')
 
+function ActionsWithString(str: string){ 
+  let normalString = ''
+  for(let i of str){
+    if(i == i.toLowerCase() && isNaN(+i)){
+      normalString += i.toUpperCase()
+    }
+    if(i == i.toUpperCase() && isNaN(+i)){
+      normalString += i.toLowerCase()
+    }
+    if(!isNaN(+i)){
+      normalString += '_'
+    }
+  }
+  console.log(normalString)
+}
 
+// вывод в консоль
+ActionsWithString('tHIS4sTRING1cONTAINS7nUMBERS3aND5lETTERS')
 
 //! задание 4
 console.log('Task 4')
+function CamelCase(str: string) {
+  //* one line solution
+  console.log(str.split('-').map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)).join(''))
+}
 
-
+// вывод в консоль
+CamelCase('border-radius')
 
 //! задание 5
 console.log('Task 5')
 
+function Abbreviation(str: string){
+  let arr = str.split(' ')
+  let newStr = ''
+  for(let i of arr){
+    newStr += i[0].toUpperCase()
+  }
+  console.log(newStr)
+}
 
+// вывод в консоль
+Abbreviation('неопознанный летающий объект')
 
 //! задание 6
 console.log('Task 6')
 
+function Concatenate(){
+  let args = Array.prototype.slice.call(arguments, 1);
+  console.log(args.join(', '))
+}
 
+// вывод в консоль
+// @ts-ignore
+Concatenate(',', 'red', 'orange', 'black', 'yellow')
 
 //! задание 7
 console.log('Task 7')
 
+function Calculate(str: string){
+  let arr = str.split(' ')
+  switch(arr[1]) {
+    case '+': console.log(+arr[0] + +arr[2])
+    break;
+    case '-': console.log(+arr[0] - +arr[2])
+    break;
+    case '*': console.log(+arr[0] * +arr[2])
+    break;
+    case '/': console.log(+arr[0] / +arr[2])
+    break;
+  }
+}
 
+// вывод в консоль
+Calculate('5 * 3')
 
 //! задание 8
 console.log('Task 8')
 
+function UrlInformation(url: string){
+  let protocol = url.split('://')[0]
+  let domain = url.split('://')[1].split('/')[0]
+  let path = url.split('://')[1].split('/').slice(1).join('/')
+  console.log(`  протокол: ${protocol}
+  домен: ${domain}
+  путь: /${path}`)
+}
 
+// вывод в консоль
+UrlInformation('https://journal.top-academy.ru/ru/main/dashboard/page/index')
 
 //! задание 9
 console.log('Task 9')
