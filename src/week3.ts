@@ -22,7 +22,7 @@ function StringStat(){
 addEventListener('input', StringStat)
 
 //! задание 2
-console.log('Task 2')
+console.log('--Task 2--')
 
 function NumToStr(num: number){
   let arr = num.toString().split('')
@@ -85,7 +85,7 @@ function NumToStr(num: number){
 NumToStr(67)
 
 //! задание 3
-console.log('Task 3')
+console.log('--Task 3--')
 
 function ActionsWithString(str: string){ 
   let normalString = ''
@@ -107,7 +107,7 @@ function ActionsWithString(str: string){
 ActionsWithString('tHIS4sTRING1cONTAINS7nUMBERS3aND5lETTERS')
 
 //! задание 4
-console.log('Task 4')
+console.log('--Task 4--')
 function CamelCase(str: string) {
   //* one line solution
   console.log(str.split('-').map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)).join(''))
@@ -117,7 +117,7 @@ function CamelCase(str: string) {
 CamelCase('border-radius')
 
 //! задание 5
-console.log('Task 5')
+console.log('--Task 5--')
 
 function Abbreviation(str: string){
   let arr = str.split(' ')
@@ -132,7 +132,7 @@ function Abbreviation(str: string){
 Abbreviation('неопознанный летающий объект')
 
 //! задание 6
-console.log('Task 6')
+console.log('--Task 6--')
 
 function Concatenate(){
   let args = Array.prototype.slice.call(arguments, 1);
@@ -144,7 +144,7 @@ function Concatenate(){
 Concatenate(',', 'red', 'orange', 'black', 'yellow')
 
 //! задание 7
-console.log('Task 7')
+console.log('--Task 7--')
 
 function Calculate(str: string){
   let arr = str.split(' ')
@@ -164,7 +164,7 @@ function Calculate(str: string){
 Calculate('5 * 3')
 
 //! задание 8
-console.log('Task 8')
+console.log('--Task 8--')
 
 function UrlInformation(url: string){
   let protocol = url.split('://')[0]
@@ -179,10 +179,41 @@ function UrlInformation(url: string){
 UrlInformation('https://journal.top-academy.ru/ru/main/dashboard/page/index')
 
 //! задание 9
-console.log('Task 9')
+console.log('--Task 9--')
 
+function SplitStr(str: string, separator: string) {
+  let arr = [];
+  let startIndex = 0;
 
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === separator) {
+      arr.push(str.substring(startIndex, i));
+      startIndex = i + 1;
+    }
+  }
+
+  arr.push(str.substring(startIndex));
+  console.log(arr);
+}
+
+// вывод в консоль
+SplitStr('i am web-developer', ' ')
 
 //! задание 10
-console.log('Task 10')
+console.log('--Task 10--')
 
+function Print(template: string, ...values: any){
+  let result = template;
+
+  for (let i = 0; i < values.length; i++) {
+    const placeholder = `%${i + 1}`;
+    const value = values[i];
+    result = result.replace(placeholder, value);
+  }
+  console.log(result);
+}
+
+// вывод в консоль
+Print('Hello! %1 %2 %3 %4', 'My', 'name', 'is', 'Timothy')
+
+console.log('--Task 1-- (type something in input)')

@@ -1,6 +1,6 @@
 import './style.css'
 //! задание 1
-console.log('Task 1')
+console.log('--Task 1--')
 
 let shoppingList = [
   {name: 'apple', quantity: 12, isBought: true},
@@ -52,7 +52,7 @@ console.log('Товар был куплен')
 Show()
 
 //! задание 2
-console.log('Task 2')
+console.log('--Task 2--')
 
 let check = [
   {name: 'avocado', quantity: 2, price: 200},
@@ -102,7 +102,7 @@ maxPrice()
 averageCost()
 
 //! задание 3
-console.log('Task 3 (css)')
+console.log('--Task 3 (look at the screen)--')
 
 let css = [
   {name: 'font-size', value: '20px'},
@@ -116,8 +116,8 @@ let css = [
   {name: 'cursor', value: 'pointer'},
   {name: 'border', value: '2px solid violet'},
 ]
-let p = document.getElementById('mainP')
-let style = document.getElementById('style')
+let p = document.getElementById('mainP') as HTMLParagraphElement
+let style = document.getElementById('style') as HTMLStyleElement
 
 function useStyle(text: string){
   p.innerHTML = `${text}`
@@ -134,7 +134,7 @@ function useStyle(text: string){
 useStyle('I wrote styles for this element using type script')
 
 //! задание 4
-console.log('Task 4')
+console.log('--Task 4--')
 
 let classrooms = [
   {name: 'yandex', seats: 15, faculty: 'web design'},

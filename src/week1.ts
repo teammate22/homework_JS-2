@@ -1,6 +1,6 @@
 import './style.css'
 //! задание 1
-console.log('Task 1')
+console.log('--Task 1--')
 
 const auto = {
   manufacturer: "Tesla",
@@ -22,14 +22,19 @@ auto.logInfo()
 auto.timeCount(1000)
 
 //! задание 2
-console.log('Task 2')
+console.log('--Task 2--')
 
-function Fraction(numerator: number, denominator: number) {
-  this.numerator = numerator;
-  this.denominator = denominator;
+class Fraction {
+  numerator: number;
+  denominator: number;
+
+  constructor(numerator: number, denominator: number) {
+    this.numerator = numerator;
+    this.denominator = denominator;
+  }
 }
 
-function Sum(fraction1: object, fraction2: object){
+function Sum(fraction1: Fraction, fraction2: Fraction){
   let fractionSum = {
     numerator: fraction1.numerator + fraction2.numerator,
     denominator: fraction1.denominator,
@@ -37,7 +42,7 @@ function Sum(fraction1: object, fraction2: object){
   return fractionSum
 }
 
-function Subst(fraction1: object, fraction2: object){
+function Subst(fraction1: Fraction, fraction2: Fraction){
   let fractionSub = {
     numerator: fraction1.numerator - fraction2.numerator,
     denominator: fraction1.denominator,
@@ -45,7 +50,7 @@ function Subst(fraction1: object, fraction2: object){
   return fractionSub
 }
 
-function Mult(fraction1: object, fraction2: object){
+function Mult(fraction1: Fraction, fraction2: Fraction){
   let fractionMult = {
     numerator: fraction1.numerator * fraction2.numerator,
     denominator: fraction1.denominator * fraction2.denominator,
@@ -53,7 +58,7 @@ function Mult(fraction1: object, fraction2: object){
   return fractionMult
 }
 
-function Div(fraction1: object, fraction2: object){
+function Div(fraction1: Fraction, fraction2: Fraction){
   let fractionDiv = {
     numerator: fraction1.numerator * fraction2.denominator,
     denominator: fraction1.denominator * fraction2.numerator,
@@ -61,14 +66,14 @@ function Div(fraction1: object, fraction2: object){
   return fractionDiv
 }
 
-function Cut(fraction: object){
-  let multiplier
+function Cut(fraction: Fraction){
+  let multiplier = 0
   for(let i = 2; i < 100; i++) {
     if(fraction.numerator % i == 0 && fraction.denominator % i == 0) {
       multiplier = i
     }
   }
-  let fractionCut = {
+  let fractionCut: Fraction = {
     numerator: fraction.numerator / multiplier,
     denominator: fraction.denominator / multiplier,
   }
@@ -83,7 +88,7 @@ console.log(Div(new Fraction(9, 7), new Fraction(8, 4)))
 console.log(Cut(new Fraction(18, 6)))
 
 //! задание 3
-console.log('Task 3')
+console.log('--Task 3--')
 
 const time = {
   second: 15,
